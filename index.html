@@ -26,14 +26,14 @@
         <h1>Today . (e.g. Mon 2 Aug)</h1>
         <p id="task-number">No. of tasks</p>
         <input class="new-todo" type="text" placeholder="What would you like to do?" autofocus>
-        <button id='add-button'>Add</button>
+        <button onclick="addTodo()" class="btn btn-add" id='add-button'>Add</button>
     </header>
     <section class="items">
         <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
           </label>
-        <ul class="todo-list"></ul>
+        <ul id="todo-list"></ul>
     </section>
 <footer></footer>
 </section>
