@@ -21,22 +21,28 @@
 </head>
 
 <body>
+<section class="todo-website">
     <header>
-        Today's Date (getDate)
-    </header>
-    <div class="controls">
-        <input type="text">
+        <h1>Today . (e.g. Mon 2 Aug)</h1>
+        <p id="task-number">No. of tasks</p>
+        <input class="new-todo" type="text" placeholder="What would you like to do?" autofocus>
         <button id='add-button'>Add</button>
+    </header>
+    <section class="items">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        <ul class="todo-list"></ul>
+    </section>
+<footer></footer>
+</section>
+    
+    <div class="controls">
         <button id='edit-button'>Edit</button>
         <button id='remove-button'>Remove</button>
     </div>
-    <div class="todoList">
-        <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-        </ul>
-    </div>
+  
     <script src="assets/js/script.js"></script>
 </body>
 
