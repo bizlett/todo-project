@@ -21,28 +21,54 @@
 </head>
 
 <body>
-<section class="todo-website">
-    <header>
-        <h1>Today . (e.g. Mon 2 Aug)</h1>
-        <p id="task-number">No. of tasks</p>
-        <input class="new-todo" type="text" placeholder="What would you like to do?" autofocus>
-        <button onclick="addTodo()" class="btn" id='add-button'>Add</button>
-    </header>
-    <section class="items">
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label>
-        <ul id="todo-list"></ul>
+
+    <section class="todo-app-container col-12">
+        <header id="todo-header">
+            <h1>Today . (e.g. Mon 2 Aug)</h1>
+            <div>
+                <span id="task-number">No. of tasks (counter)</span>
+                <ul class="filters">
+                    <li>
+                        <a href="#/" class="selected">All</a>
+                    </li>
+                    <li>
+                        <a href="#/active" class="active">Active</a>
+                    </li>
+                    <li>
+                        <a href="#/completed" class="completed">Completed</a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+        <section class="input-todo">
+            <div>
+                <input class="new-todo" type="text" placeholder="What would you like to do?" autofocus>
+                <button onclick="addTodo()" class="btn" id='add-button'>Add</button>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <ul id="todo-list">
+                <li>I'm a test todo!</li>
+                <li>I'm a test todo!</li>
+                <li>I'm a test todo!</li>
+                <li>I'm a test todo!</li>
+                <li>I'm a test todo!</li>
+                <li>I'm a test todo!</li>
+            </ul>
+        </section>
+
     </section>
-<footer></footer>
-</section>
-    
-    <div class="controls">
-        <button id='edit-button'>Edit</button>
-        <button id='remove-button'>Remove</button>
-    </div>
-  
+    <footer>
+        <div class="app-info">
+            <p>Double click todo to edit!</p>
+            <p><a id="back-to-top" href ="#todo-header">Back to the top</a></p>
+        </div>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 

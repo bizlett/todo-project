@@ -1,5 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right bottom, #a8dadc 0%, #a8dadc 50%, #fff 50%, #fff 100%);
+  padding: 4rem;
+}
+
+#todo-header  {
+  background-color: #e63946;
+  color: #fff;
+  padding: 1rem;
+  border: solid .5px #1d3557;
+}
+
+/* .filters, 
+li,
+a {
+  display: inline;
+  list-style: none;
+  color: #f1faee;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  text-decoration: none;
+} */
+
+.filters,
+li,
+a:hover {
+  color: #a8dadc;
+}
+
+.todo-app-container {
+  background-color: #f1faee;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: block;
+  flex-direction: column;
+  box-shadow: 4px 8px #1d3557;
+  border: solid .5px #1d3557;
+  border-radius: 3px;
+}
+
+.input-todo {
+  padding-top: 1rem;
+}
+
+.new-todo {
+  width: 80%;
+  height: 45px;
+  display: inherit;
+  margin: auto;
+  border: 1px solid #1d3557;
+  padding: 0 15px;
+  color: #1d3557
+}
+
+::placeholder {
+  color: #457b9d;
+  opacity: .5;
+}
+
+#add-button {
+  display: inherit;
+  margin: auto;
+} 
+
+#todo-list li {
+  width: 80%;
+  padding: 0 15px;
+  height: 45px;
+  margin: auto;
+  line-height: 45px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  position: relative;
+  list-style: none;
+  background: #a8dadc;
+  color: #1d3557;
+}
+
+#todo-list li .icon {
+  position: absolute;
+  right: -45px;
+  background: #a8dadc;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#todo-list li:hover .icon {
+  right: 0px;
+}
+
+.app-info {
+  text-align: center;
+  color: #1d3557;
+  padding-top: 1rem;
+  width: 100%;
+  font-size: 120%;
+  display: block;
+  margin: 0;
+}
+
+#back-to-top {
+  color: #1d3557;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#back-to-top:hover {
+  color: #457b9d;
+  text-decoration: underline;
+}
+
+
 
 /* The switch - the box around the slider */
 .switch {
@@ -42,7 +167,7 @@
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #457b9d;
   }
   
   input:focus + .slider {
