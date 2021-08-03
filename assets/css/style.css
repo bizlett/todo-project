@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-html {
-  height: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.col-12 .row {
+  padding: 0;
+  margin: 0;
+}
+
+::selection{
+  color: #ffff;
+  background: #457b9d;
 }
 
 body {
@@ -12,50 +25,56 @@ body {
   padding: 4rem;
 }
 
-#todo-header  {
-  background-color: #e63946;
-  color: #fff;
-  padding: 1rem;
-  border: solid .5px #1d3557;
-}
-
-/* .filters, 
-li,
-a {
-  display: inline;
-  list-style: none;
-  color: #f1faee;
-  margin-left: .5rem;
-  margin-right: .5rem;
-  text-decoration: none;
-} */
-
-.filters,
-li,
-a:hover {
-  color: #a8dadc;
-}
-
 .todo-app-container {
   background-color: #f1faee;
   width: 80%;
   height: auto;
   margin: auto;
-  display: block;
+  display: flex;
   flex-direction: column;
   box-shadow: 4px 8px #1d3557;
   border: solid .5px #1d3557;
   border-radius: 3px;
 }
 
+#todo-header  {
+  background-color: #e63946;
+  color: #fff;
+  padding: .5rem;
+  border: solid .5px #1d3557;
+}
+
+#task-number {
+  display: inline;
+}
+
+#filters li {
+  display: inline;
+  list-style: none;
+  color: #f1faee;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+#filters a {
+  color: #f1faee;
+  text-decoration: none;
+}
+
+#filters a:hover {
+  color: #a8dadc;
+  text-decoration: underline;
+}
+
 .input-todo {
-  padding-top: 1rem;
+  display: inline;
+  text-align: center;
+  padding-top: .5rem;
 }
 
 .new-todo {
   width: 80%;
   height: 45px;
-  display: inherit;
   margin: auto;
   border: 1px solid #1d3557;
   padding: 0 15px;
@@ -68,15 +87,21 @@ a:hover {
 }
 
 #add-button {
-  display: inherit;
   margin: auto;
+  font-size: 200%;
+  color:#457b9d;
 } 
+
+#add-button:hover {
+  color:#2196F3;
+}
 
 #todo-list li {
   width: 80%;
   padding: 0 15px;
   height: 45px;
   margin: auto;
+  text-align: start;
   line-height: 45px;
   margin-bottom: 8px;
   border-radius: 3px;
@@ -109,7 +134,7 @@ a:hover {
   width: 100%;
   font-size: 120%;
   display: block;
-  margin: 0;
+  margin: auto;
 }
 
 #back-to-top {
@@ -120,16 +145,14 @@ a:hover {
 }
 
 #back-to-top:hover {
-  color: #457b9d;
+  color: #2196F3;
   text-decoration: underline;
 }
-
-
 
 /* The switch - the box around the slider */
 .switch {
     position: relative;
-    display: inline-block;
+    display: flex;
     width: 60px;
     height: 34px;
   }
@@ -149,7 +172,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #457b9d;;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -167,11 +190,11 @@ a:hover {
   }
   
   input:checked + .slider {
-    background-color: #457b9d;
+    background-color: #2196F3;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #457b9d;
   }
   
   input:checked + .slider:before {

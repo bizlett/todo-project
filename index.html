@@ -25,9 +25,9 @@
     <section class="todo-app-container col-12">
         <header id="todo-header">
             <h1>Today . (e.g. Mon 2 Aug)</h1>
-            <div>
+            <div class="row">
                 <span id="task-number">No. of tasks (counter)</span>
-                <ul class="filters">
+                <ul id="filters">
                     <li>
                         <a href="#/" class="selected">All</a>
                     </li>
@@ -39,12 +39,11 @@
                     </li>
                 </ul>
             </div>
-
         </header>
         <section class="input-todo">
             <div>
                 <input class="new-todo" type="text" placeholder="What would you like to do?" autofocus>
-                <button onclick="addTodo()" class="btn" id='add-button'>Add</button>
+                <button class="btn" id='add-button'><i class="fas fa-plus"></i></button>
             </div>
             <div>
                 <label class="switch">
@@ -61,12 +60,11 @@
                 <li>I'm a test todo!</li>
             </ul>
         </section>
-
     </section>
     <footer>
         <div class="app-info">
             <p>Double click todo to edit!</p>
-            <p><a id="back-to-top" href ="#todo-header">Back to the top</a></p>
+            <p><a id="back-to-top" href="#todo-header">Back to the top</a></p>
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
