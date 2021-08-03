@@ -24,7 +24,7 @@
 
     <section class="todo-app-container col-12">
         <header id="todo-header">
-            <h1>Today . (e.g. Mon 2 Aug)</h1>
+            <h1>Today . <span id="today-date"></span></h1>
             <div class="row">
                 <span id="task-number">No. of tasks (counter)</span>
                 <ul id="filters">
@@ -42,15 +42,17 @@
         </header>
         <section class="input-todo">
             <div>
+                
                 <input class="new-todo" type="text" placeholder="What would you like to do?" autofocus>
                 <button class="btn" id='add-button'><i class="fas fa-plus"></i></button>
+                
             </div>
             <div>
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                 </label>
-            </div>
+            
             <ul id="todo-list">
                 <li>I'm a test todo!</li>
                 <li>I'm a test todo!</li>
@@ -59,6 +61,7 @@
                 <li>I'm a test todo!</li>
                 <li>I'm a test todo!</li>
             </ul>
+        </div>
         </section>
     </section>
     <footer>

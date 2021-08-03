@@ -1,3 +1,12 @@
+// get date
+const options = {weekday: 'short', month: 'short', day: 'numeric'};
+const todayDate = new Date().toLocaleTimeString('en-us', options);
+
+document.getElementById('today-date').innerHTML = todayDate;
+
+
+
+
 // add event listener
 const addButton = document.getElementById('add-button'); 
 addButton.click = addTodo;   

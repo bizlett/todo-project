@@ -27,7 +27,6 @@ body {
 
 .todo-app-container {
   background-color: #f1faee;
-  width: 80%;
   height: auto;
   margin: auto;
   display: flex;
@@ -73,12 +72,12 @@ body {
 }
 
 .new-todo {
-  width: 80%;
+  width: 70%;
   height: 45px;
   margin: auto;
   border: 1px solid #1d3557;
   padding: 0 15px;
-  color: #1d3557
+  color: #1d3557;
 }
 
 ::placeholder {
@@ -96,8 +95,13 @@ body {
   color:#2196F3;
 }
 
+.switch {
+  display: inline;
+  
+}
+
 #todo-list li {
-  width: 80%;
+  width: 70%;
   padding: 0 15px;
   height: 45px;
   margin: auto;
