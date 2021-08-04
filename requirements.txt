@@ -6,7 +6,7 @@ Version 1
 [x] It should have a way to remove a todo
 
 Version 2
-[] It should have a function to add a todo
+[x] It should have a function to add a todo
     - get new todo
     - get new todo text
     - create new li

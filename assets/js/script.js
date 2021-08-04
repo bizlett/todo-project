@@ -1,47 +1,47 @@
-// get date
+// get date for header
 const options = {weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'};
 const todayDate = new Date().toLocaleTimeString('en-us', options);
 
 document.getElementById('today-date').innerHTML = todayDate;
 
+// Todo list setup
+const todoInput = document.querySelector('.new-todo');
+const addButton = document.querySelector('#add-button');
+const todoList = document.querySelector('#todo-list');
+const deleteButton = document.querySelector('.delete-button');
 
-// add event listener
-const addButton = document.getElementById('add-button'); 
-addButton.click = addTodo;   
+// Event listeners
+addButton.addEventListener('click', addTodo);
+deleteButton.addEventListener('click', deleteTodo);
 
-function addTodo(){
-    // create a new todo
-    var newTodo = document.getElementsByClassName('new-todo');
+// Functions
 
-    // create a new element for the newTodo and store it in a variable
-    var li = document.createElement('li');
+function addTodo(event){
+    // prevent form submitting
+    event.preventDefault();
 
-    // create a text node and store it in a variable
-    var todoText = document.createTextNode(document.getElementsByClassName('new-todo'));
+    // todoItem div to hold new todo and iccons
+    let todoDiv = document.createElement('div');
 
-    // attach the new text node (todoText) to the new element (li)
-    li.appendChild(todoText);
+    // create new li to go into todoItem div
+    let newTodo = document.createElement('li');
+    newTodo.innerText = document.getElementsByClassName('new-todo')[0].value;
+    newTodo.classList.add('new-todo');
+    todoDiv.appendChild(newTodo);
 
-    // create the position for where the new element should be added (at the start of the ul)
-    var todoList = document.getElementById('todo-list')[0];
+    // check button
+    let completedButton = document.createElement('button');
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add('complete-btn');
+    todoDiv.appendChild(completedButton);
 
-    // insert the new element (newTodo) into the new position (start of todoList)
-    todoList.appendChild(newTodo);
+    // delete button
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+    deleteButton.classList.add('delete-button');
+    todoDiv.appendChild(deleteButton);
 
-}
+    // append to todo list
+    todoList.appendChild(todoDiv);
+};
 
-
-// // defines a variable to store new todo
-// let  todoList = document.getElementsByClassName('todo-list');
-    
-// // defines where to get the new todo from
-// let newTodo = document.getElementsByClassName('new-todo');
-
-// // defines the element to create to store the new todo
-// let li = document.createElement('li');
-
-// // sets class of attribute and fetches text from input box 
-// li.setAttribute('class', newTodo.value);
-
-// // appends new element into the todoList and displays text from input box
-// li.appendChild(document.createTextNode(newTodo));

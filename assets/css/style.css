@@ -76,6 +76,7 @@ body {
   height: 45px;
   margin: auto;
   border: 1px solid #1d3557;
+  border-radius: 3px;
   padding: 0 15px;
   color: #1d3557;
 }
