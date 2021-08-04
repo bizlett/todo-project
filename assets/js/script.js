@@ -4,17 +4,16 @@ const todayDate = new Date().toLocaleTimeString('en-us', options);
 
 document.getElementById('today-date').innerHTML = todayDate;
 
+
 // Todo list setup
 const todoInput = document.querySelector('.new-todo');
 const addButton = document.querySelector('#add-button');
 const todoList = document.querySelector('#todo-list');
 const deleteButton = document.querySelector('.delete-button');
-const todo = document.querySelector('li');
-const editTodo = this.todo
-
 
 
 // Event listeners
+
 addButton.addEventListener('click', addTodo);
 
 todoList.addEventListener('click', deleteTodo);
@@ -59,7 +58,7 @@ function addTodo(event) {
 
 function deleteTodo(event) {
     // do I need this? look into further
-    // event.preventDefault();
+    event.preventDefault();
 
     // find the element to remove - li element that is being clicked??
     let deleteTodo = event.target;
@@ -70,9 +69,3 @@ function deleteTodo(event) {
     todoList.remove(this.deleteTodo);
 
 };
-
-function editTodo(event) {
-
-    let editTodo = event.target;
-
-}

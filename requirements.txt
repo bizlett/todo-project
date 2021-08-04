@@ -11,7 +11,19 @@ Version 2
     - get new todo text
     - create new li
     - append new li into todo list
+    - delete and check icons should also be created
 [] It should have a function to edit a todo
     - edit on double click rather than button
-[] It should have a function to remove a todo
-[] It should tell the user the local date and time
+[x] It should have a function to remove a todo
+[x] It should tell the user the local date and time
+
+Version 3
+[] It should tell the user the local date and time in day, date, month, year format (without time!)
+[] It should show the delete button on hover
+[] It should trigger linethrough styling when the checkbox is clicked
+[] It should add todo on hitting enter key
+[] It should have a counter of how many tasks there are on the list
+
+Version 4
+[] It should have filters to select todos that are completed, active or all of them
+
