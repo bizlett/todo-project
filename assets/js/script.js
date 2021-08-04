@@ -1,10 +1,8 @@
 // get date
-const options = {weekday: 'short', month: 'short', day: 'numeric'};
+const options = {weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'};
 const todayDate = new Date().toLocaleTimeString('en-us', options);
 
 document.getElementById('today-date').innerHTML = todayDate;
-
-
 
 
 // add event listener

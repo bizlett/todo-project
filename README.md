@@ -1,6 +1,13 @@
 Bugs
 
-.filters ul needs to be display:inline. But when the styling is applied, #todolist li inherits the same styling. Have commented out css for now to revisit.
+getDate to show short month, day, (year??) - probably need to create arrays and pull from array? 
+
+Todos
+
+revisit where the toggle all should go! html/css a bit buggy
+
+todo li - add check box; trash icon (show)
+
 
 Code
 
