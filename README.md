@@ -6,7 +6,7 @@ Todos
 
 revisit where the toggle all should go! html/css a bit buggy
 
-todo li - add check box; trash icon (show)
+style delete button and check button
 
 
 Code
