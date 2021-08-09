@@ -112,6 +112,10 @@ body {
   border: 1px solid #1d3557;
 }
 
+#todo-list li:hover {
+  color: #2196F3;
+}
+
 .checkbox {}
 
 .fa-times {
