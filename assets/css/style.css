@@ -96,15 +96,10 @@ body {
   color:#2196F3;
 }
 
-.switch {
-  display: inline;
-  
-}
-
 #todo-list li {
   width: 70%;
   padding: 0 15px;
-  height: 45px;
+  height: 3rem;
   margin: auto;
   text-align: start;
   line-height: 45px;
@@ -114,22 +109,24 @@ body {
   list-style: none;
   background: #a8dadc;
   color: #1d3557;
+  border: 1px solid #1d3557;
 }
 
-#todo-list li .icon {
+.checkbox {}
+
+.fa-times {
+  right: 1rem;
   position: absolute;
-  right: -45px;
-  background: #a8dadc;
-  width: 45px;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 3px 3px 0;
+  margin: auto;
+  font-size: 200%;
+  color:#fff;
+  padding-top: .5rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-#todo-list li:hover .icon {
-  right: 0px;
+.fa-times:hover {
+  color: #e63946;
 }
 
 .app-info {
