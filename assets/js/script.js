@@ -35,6 +35,12 @@ function addTodo(event) {
     let todo = document.createElement('li');
     todo.textContent = todoInput.value;
     
+    // check if there is text to submit, else throw error
+    if (todo == "") {
+        alert("Please enter a task!");
+        return false;
+    };
+    
     // append li to div
     todoDiv.appendChild(todo);
 
