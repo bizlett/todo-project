@@ -27,29 +27,33 @@ function addTodo(event) {
     // prevent form submitting
     event.preventDefault();
 
-    // create li
-    let todo = document.createElement('li');
-    // create div for buttons
+    // create div to hold li and buttons
     let todoDiv = document.createElement('div');
+    todoDiv.className = 'todo-div';
 
-    // create check button
-    let checkButton = document.createElement('checkbox');
-    checkButton.className = 'check-button', 'form-check-input';
-    checkButton.appendChild(todoDiv);
-
-    // create delete button
-    let deleteButton = document.createElement('button');
-    deleteButton.innerHTML = '<i class="fa fas-times"></i>'
-    deleteButton.appendChild(todoDiv);
-
-    // text for todo
-    todo.innerText = todoInput; 
-
-    // append div to li
+    // create li with text from input
+    let todo = document.createElement('li');
+    todo.textContent = todoInput.value;
+    
+    // append li to div
     todoDiv.appendChild(todo);
 
-    // append li to ul
-    todo.appendChild(todoList);
+    // create check button
+    let checkButton = document.createElement('input');
+    checkButton.setAttribute('type', 'checkbox');
+    checkButton.className = 'check-button';
+    todoDiv.appendChild(checkButton);
+
+    // create delete button
+    let deleteButton = document.createElement('button'); 
+    deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+    todoDiv.appendChild(deleteButton);
+
+    // append todoDiv to list
+    todoList.appendChild(todoDiv);
+
+    // clear todo input
+    todoInput.value = '';
 };
 
 // function deleteTodo(event) {
