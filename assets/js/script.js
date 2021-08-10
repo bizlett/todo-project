@@ -27,43 +27,29 @@ function addTodo(event) {
     // prevent form submitting
     event.preventDefault();
 
-    // create div to hold check button & delete button
+    // create li
+    let todo = document.createElement('li');
+    // create div for buttons
     let todoDiv = document.createElement('div');
-    // add class to style todo
-    todoDiv.classList.add('todo');
 
-    // create new li
-    let newTodo = document.createElement('li');
-    // add class to style li
-    newTodo.classList.add('new-todo');
-    // get todo text for new li - could change to todoInput as its defined globally
-    newTodo.innerText = document.getElementsByClassName('new-todo')[0].value;
-    // append div to li
-    todoDiv.appendChild(newTodo);
-
-    // add checkButton
-    let checkButton = document.createElement('input');
     // create check button
-    checkButton.innerHTML = 'input type="checkbox"';
-    // add class to style check button
-    checkButton.classList.add('check-button', 'form-check-input'); 
-    // append button to div
-    todoDiv.appendChild(checkButton);
+    let checkButton = document.createElement('checkbox');
+    checkButton.className = 'check-button', 'form-check-input';
+    checkButton.appendChild(todoDiv);
 
-    // add deleteButton
-    let deleteButton = document.createElement('button');
     // create delete button
-    deleteButton.innerHTML = '<i class="fas fa-times"></i>';
-    // add class to style delete button
-    checkButton.classList.add('delete-button'); 
-    // append button to div
-    todoDiv.appendChild(deleteButton);
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<i class="fa fas-times"></i>'
+    deleteButton.appendChild(todoDiv);
 
-    // append to list
-    todoList.appendChild(todoDiv);
+    // text for todo
+    todo.innerText = todoInput; 
 
-    
+    // append div to li
+    todoDiv.appendChild(todo);
 
+    // append li to ul
+    todo.appendChild(todoList);
 };
 
 // function deleteTodo(event) {
