@@ -113,10 +113,12 @@ body {
 }
 
 #todo-list li:hover {
-  color: #2196F3;
+  background-color: #457b9d;
 }
 
-.checkbox {}
+.check-button {
+  font-size: 200%;
+}
 
 .fa-times {
   right: 1rem;

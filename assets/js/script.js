@@ -27,49 +27,46 @@ function addTodo(event) {
     // prevent form submitting
     event.preventDefault();
 
+    // create div to hold check button & delete button
+    let todoDiv = document.createElement('div');
+    // add class to style todo
+    todoDiv.classList.add('todo');
+
     // create new li
     let newTodo = document.createElement('li');
-
-    // get todo text for new li
-    newTodo.innerText = document.getElementsByClassName('new-todo')[0].value;
-
     // add class to style li
     newTodo.classList.add('new-todo');
-
-    // create todoItem div to hold new complete button
-    // let todoDiv = document.createElement('div');
-
-    // create check button
-    let checkButton = document.createElement('input');
-
-    // write html for check button
-    checkButton.innerHTML = '<input type = "checkbox">';
-
-    // add class to style check button
-    checkButton.classList.add('checkButton');
-
-    newTodo.appendChild(checkButton);
-
+    // get todo text for new li - could change to todoInput as its defined globally
+    newTodo.innerText = document.getElementsByClassName('new-todo')[0].value;
     // append div to li
-    // todoDiv.appendChild(checkButton);
+    todoDiv.appendChild(newTodo);
 
-    // append div with checkButton inside li
-    // todoDiv.appendChild(newTodo);
+    // add checkButton
+    let checkButton = document.createElement('input');
+    // create check button
+    checkButton.innerHTML = 'input type="checkbox"';
+    // add class to style check button
+    checkButton.classList.add('check-button', 'form-check-input'); 
+    // append button to div
+    todoDiv.appendChild(checkButton);
 
-    // delete button
+    // add deleteButton
     let deleteButton = document.createElement('button');
+    // create delete button
     deleteButton.innerHTML = '<i class="fas fa-times"></i>';
-    deleteButton.classList.add('delete-button');
-    newTodo.appendChild(deleteButton);
+    // add class to style delete button
+    checkButton.classList.add('delete-button'); 
+    // append button to div
+    todoDiv.appendChild(deleteButton);
 
-    // append to todo list
-    // todoList.appendChild(todoDiv);
+    // append to list
+    todoList.appendChild(todoDiv);
 
-    // clear todo input
-    todoInput.value = '';
+    
+
 };
 
-function deleteTodo(event) {
+// function deleteTodo(event) {
     // do I need this? look into further
     // event.preventDefault();
 
@@ -81,4 +78,4 @@ function deleteTodo(event) {
 
     // todoList.remove(this.deleteTodo);
 
-};
+// };
