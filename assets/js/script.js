@@ -1,4 +1,4 @@
-// get date for header
+// Get date for header
 const options = {
     weekday: 'short',
     month: 'short',
@@ -9,11 +9,23 @@ const todayDate = new Date().toLocaleDateString('en-us', options);
 
 document.getElementById('today-date').innerHTML = todayDate;
 
-// Todo list setup
+// Todo counter - total number of tasks on todoList
+
+// increment function
+function countTodos(todoList) {
+    let count = 0
+    // iterates through length of todo list, adding 1 for every new item
+    for (let i = 0; i < todoList.length; i++);
+    todoCounter.textContent(count);
+};
+
+// Global variables
+const todoCounter = document.querySelector('#task-counter');
+
 const todoInput = document.querySelector('.new-todo');
 const addButton = document.querySelector('#add-button');
 const todoList = document.querySelector('#todo-list');
-// not sure if I need declare deleteButton... Its on the todo-list
+// not sure if I need declare deleteButton... Its on the todo-list and delete function will be removeChild from parent node
 const deleteButton = document.querySelector('.delete-button');
 
 // Event listeners
@@ -65,7 +77,7 @@ function addTodo(event) {
     } else {
 
         // Alert message when todoInput is empty
-        alert ("Please add a task!");
+        alert("Please add a task!");
     }
 };
 
@@ -73,7 +85,7 @@ function addTodo(event) {
 // do I need this? look into further
 // event.preventDefault();
 
-// find the element to remove - li element that is being clicked??
+// find the element to remove - li element that is being clicked?? 
 // let deleteTodo = event.target;
 
 // the containing element of the element we're removing (defined globally - might not need this here)
