@@ -34,7 +34,7 @@ addButton.addEventListener('click', addTodo);
 // funky formatting issues! want the complete button at the start and the delete button at the end ideally
 // perhaps div WITHIN the li to hold button rather than div to hold everything?
 
-todoList.addEventListener('click', deleteTodo);
+todoList.addEventListener('click', deleteCheckTodo);
 // this event listener is on todoList so ANY click on it will delete anything on the ul right now
 // if/else should sort this. Need to also amend to target only the li being clicked and not all of them
 
@@ -59,13 +59,13 @@ function addTodo(event) {
         todoDiv.appendChild(todo);
 
         // create check button
-        let checkButton = document.createElement('button');
+        let checkButton = document.createElement('i');
         checkButton.innerHTML = '<i class="fas fa-check"></i>';
         checkButton.className = 'check-button';
         todoDiv.appendChild(checkButton);
 
         // create delete button
-        let deleteButton = document.createElement('button');
+        let deleteButton = document.createElement('i');
         deleteButton.innerHTML = '<i class="fas fa-times"></i>';
         deleteButton.className = 'delete-button';
         todoDiv.appendChild(deleteButton);
@@ -76,22 +76,27 @@ function addTodo(event) {
         // clear todo input
         todoInput.value = '';
     } else {
-
         // Alert message when todoInput is empty
         alert("Please add a task!");
     }
 };
 
-// function deleteTodo(event) {
+function deleteCheckTodo(event) {
 // do I need this? look into further
 // event.preventDefault();
 
-// find the element to remove - li element that is being clicked?? 
-// let deleteTodo = event.target;
+// identify element being clicked on
+let targetElement = event.target;
 
-// the containing element of the element we're removing (defined globally - might not need this here)
-// let todoList = document.querySelector('#todo-list');
+// if statement - what to do if delete button clicked - delete button identifier = classname delete-button
+if (targetElement.className === 'delete-button') {
+    todoList.remove(this.targetElement);
+};
 
-// todoList.remove(this.deleteTodo);
+// else statement - what to do if check button clicked - check button identifier = classname check-button
 
-// };
+else {
+
+}
+
+};

@@ -12,8 +12,6 @@ revisit where the toggle all should go! Make a decision!
 
 style inputTodo so that border extends round + button, making it look like its inside the box
 
-li delete button and check button on dynamically created elements - figure out wtf is happening here
-
 complete todo (linethrough) function on checking check box - will need to add completed/active class to it for filters to pick up?
 
 remove element on click delete button - function to be written combined with complete todo because both have on click event listener on ul. if else.  

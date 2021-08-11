@@ -149,15 +149,9 @@ body {
 .check-button, .delete-button {
   border: none;
   padding: .2rem;
-  background-color: #a8dadc;
   font-size: 150%;
   margin-right: .5rem;
   cursor: pointer;
-}
-
-.delete-button:hover, 
-.check-button:hover {
-  background-color: #98c0c2; 
 }
 
 .fa-check {
