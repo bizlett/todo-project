@@ -7,10 +7,12 @@
   font-family: 'Raleway', sans-serif;
 }
 
+/* Think this is redundant code
+
 .col-12 .row {
   padding: 0;
   margin: 0;
-}
+} */
 
 ::selection{
   color: #ffff;
@@ -47,9 +49,10 @@ body {
 
 /* Task counter */
 
+/* Think this is redundant code
 #task-number {
   display: inline;
-}
+} */
 
 /* Filter todos menu */
 
@@ -81,7 +84,7 @@ body {
 
 .new-todo {
   width: 70%;
-  height: 45px;
+  height: 2.5rem;
   margin: auto;
   border: 1px solid #1d3557;
   border-radius: 3px;
@@ -108,41 +111,57 @@ body {
 
 /* Todo list item */
 
-#todo-list li {
-  width: 70%;
-  padding: 0 15px;
-  height: 3rem;
+.todo-div {
   margin: auto;
-  text-align: start;
-  line-height: 45px;
-  margin-bottom: 8px;
-  border-radius: 3px;
-  position: relative;
-  list-style: none;
-  background: #a8dadc;
+  width: 80%;
+  background:#a8dadc;
   color: #1d3557;
   border: 1px solid #1d3557;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
 }
 
-#todo-list li:hover {
+.todo-div:hover {
   background-color: #98c0c2;
+}
+
+#todo-list li {
+  flex: 1;
+  padding: 0 15px;
+  margin: auto;
+  text-align: start;
+  line-height: 2.5rem;
+  margin-bottom: .5rem;
+  list-style: none;
 }
 
 /* Check button */
 
 .check-button {
-  font-size: 200%;
+  float:inline-start;
 }
 
 /* Delete button */
 
+.delete-button {
+  border: none;
+  padding: .2rem;
+  background-color: #a8dadc;
+  font-size: 150%;
+  margin-right: .5rem;
+}
+
+.delete-button:hover {
+  background-color: #98c0c2; 
+}
+
 .fa-times {
-  right: 1rem;
-  position: absolute;
-  margin: auto;
-  font-size: 200%;
+  font-size: 150%;
   color:#fff;
-  padding-top: .5rem;
+  border: none;
   cursor: pointer;
   transition: all 0.2s ease;
 }

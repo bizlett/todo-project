@@ -52,7 +52,7 @@ function addTodo(event) {
     let todo = document.createElement('li');
     todo.textContent = todoInput.value;
 
-    // check if there is text to submit, else throw error
+    // check if there is text to submit, else trigger alert
     if (todoInput.value != "") {
 
         // append li to div
@@ -67,6 +67,7 @@ function addTodo(event) {
         // create delete button
         let deleteButton = document.createElement('button');
         deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+        deleteButton.className = 'delete-button';
         todoDiv.appendChild(deleteButton);
 
         // append todoDiv to list
