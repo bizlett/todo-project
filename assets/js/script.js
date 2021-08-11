@@ -59,8 +59,8 @@ function addTodo(event) {
         todoDiv.appendChild(todo);
 
         // create check button
-        let checkButton = document.createElement('input');
-        checkButton.setAttribute('type', 'checkbox');
+        let checkButton = document.createElement('button');
+        checkButton.innerHTML = '<i class="fas fa-check"></i>';
         checkButton.className = 'check-button';
         todoDiv.appendChild(checkButton);
 

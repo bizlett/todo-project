@@ -146,16 +146,30 @@ body {
 
 /* Delete button */
 
-.delete-button {
+.check-button, .delete-button {
   border: none;
   padding: .2rem;
   background-color: #a8dadc;
   font-size: 150%;
   margin-right: .5rem;
+  cursor: pointer;
 }
 
-.delete-button:hover {
+.delete-button:hover, 
+.check-button:hover {
   background-color: #98c0c2; 
+}
+
+.fa-check {
+  font-size: 150%;
+  color:rgb(38, 167, 55);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fa-check:hover {
+  color: rgb(23, 100, 34);
 }
 
 .fa-times {
