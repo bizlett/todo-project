@@ -97,7 +97,10 @@ if (targetLi.className.matches('delete-button')) {
 };
 
 if (targetLi.className.matches('check-button')) {
-    todoList.remove(this.targetLi);
+    // linethrough text
+    // change opacity of text
+    // change opacity of li
+    // add class name '.completed'
 };
 
 
