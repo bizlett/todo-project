@@ -49,15 +49,20 @@ body {
 
 /* Task counter */
 
-/* Think this is redundant code
 #task-number {
-  display: inline;
-} */
+  display: flex;
+  font-size: 1.25rem;
+}
 
 /* Filter todos menu */
 
+#filters {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+}
+
 #filters li {
-  display: inline;
   list-style: none;
   color: #f1faee;
   margin-right: 1rem;
@@ -99,13 +104,18 @@ body {
 
 /* Add todo button */
 
-#add-button {
+.fa-plus,
+.fa-angle-up {
   margin: auto;
   font-size: 200%;
   color:#1d3557;
 } 
 
 #add-button:hover {
+  color:#2196F3;
+}
+
+#toggle-button:hover {
   color:#2196F3;
 }
 
