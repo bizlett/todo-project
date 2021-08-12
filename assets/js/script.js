@@ -92,14 +92,19 @@ let targetLi = event.target;
 // could try .includes() - determine whether or not a string includes another string (prob not right)
 // could try .matches() - checks if the element "is" the selector
 // could try .contains() - checks to see if an element is in the page's body (prob too broad)
-if (targetLi.className === 'delete-button') {
+if (targetLi.className.matches('delete-button')) {
     todoList.remove(this.targetLi);
 };
 
+if (targetLi.className.matches('check-button')) {
+    todoList.remove(this.targetLi);
+};
+
+
 // else statement - what to do if check button clicked - check button identifier = classname check-button
 
-else {
+// else {
 
-}
+// }
 
 };
