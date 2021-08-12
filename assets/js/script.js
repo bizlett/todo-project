@@ -60,13 +60,13 @@ function addTodo(event) {
 
         // create check button
         let checkButton = document.createElement('i');
-        checkButton.innerHTML = '<i class="fas fa-check"></i>';
+        checkButton.innerHTML = '<i class="fas fa-check" title="Complete todo"></i>';
         checkButton.className = 'check-button';
         todoDiv.appendChild(checkButton);
 
         // create delete button
         let deleteButton = document.createElement('i');
-        deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+        deleteButton.innerHTML = '<i class="fas fa-times" title="Remove todo"></i>';
         deleteButton.className = 'delete-button';
         todoDiv.appendChild(deleteButton);
 
