@@ -86,11 +86,14 @@ function deleteCheckTodo(event) {
 // event.preventDefault();
 
 // identify element being clicked on
-let targetElement = event.target;
+let targetLi = event.target;
 
 // if statement - what to do if delete button clicked - delete button identifier = classname delete-button
-if (targetElement.className === 'delete-button') {
-    todoList.remove(this.targetElement);
+// could try .includes() - determine whether or not a string includes another string (prob not right)
+// could try .matches() - checks if the element "is" the selector
+// could try .contains() - checks to see if an element is in the page's body (prob too broad)
+if (targetLi.className === 'delete-button') {
+    todoList.remove(this.targetLi);
 };
 
 // else statement - what to do if check button clicked - check button identifier = classname check-button
