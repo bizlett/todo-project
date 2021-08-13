@@ -83,7 +83,7 @@ function addTodo(event) {
 
 function deleteCheckTodo(event) {
 // do I need this? look into further
-// event.preventDefault();
+event.preventDefault();
 
 // identify element being clicked on
 let targetLi = event.target;
@@ -92,11 +92,11 @@ let targetLi = event.target;
 // could try .includes() - determine whether or not a string includes another string (prob not right)
 // could try .matches() - checks if the element "is" the selector
 // could try .contains() - checks to see if an element is in the page's body (prob too broad)
-if (targetLi.className.matches('delete-button')) {
+if (targetLi.classList === 'delete-button') {
     todoList.remove(this.targetLi);
 };
 
-if (targetLi.className.matches('check-button')) {
+if (targetLi.classList.matches('check-button')) {
     // linethrough text
     // change opacity of text
     // change opacity of li
