@@ -92,8 +92,11 @@ let targetLi = event.target;
 // could try .includes() - determine whether or not a string includes another string (prob not right)
 // could try .matches() - checks if the element "is" the selector
 // could try .contains() - checks to see if an element is in the page's body (prob too broad)
-if (targetLi.classList === 'delete-button') {
-    todoList.remove(this.targetLi);
+if (targetLi.classList.matches('delete-button')) {
+    // need to grab parent of element to remove - trying to remove element directly not working
+    let removeTodo = targetLi.parentElement;
+    // now remove target element
+    todoList.remove(removeTodo);
 };
 
 if (targetLi.classList.matches('check-button')) {
