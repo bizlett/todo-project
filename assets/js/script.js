@@ -101,6 +101,7 @@ if (targetLi.className.matches('check-button')) {
     // change opacity of text
     // change opacity of li
     // add class name '.completed'
+    alert('You clicked the check button!');
 };
 
 
