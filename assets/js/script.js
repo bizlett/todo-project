@@ -96,7 +96,7 @@ if (targetLi.classList.matches('delete-button')) {
     // need to grab parent of element to remove - trying to remove element directly not working
     let removeTodo = targetLi.parentElement;
     // now remove target element
-    todoList.remove(removeTodo);
+    todoList.removeChild(removeTodo);
 };
 
 if (targetLi.classList.matches('check-button')) {
