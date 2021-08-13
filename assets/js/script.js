@@ -60,14 +60,14 @@ function addTodo(event) {
 
         // create check button
         let checkButton = document.createElement('i');
-        checkButton.innerHTML = '<i class="fas fa-check" title="Complete todo"></i>';
-        checkButton.className = 'check-button';
+        checkButton.classList.add('check-button', 'fas', 'fa-check', 'btn');
+        checkButton.setAttribute('title', 'Complete todo');
         todoDiv.appendChild(checkButton);
 
         // create delete button
         let deleteButton = document.createElement('i');
-        deleteButton.innerHTML = '<i class="fas fa-times" title="Remove todo"></i>';
-        deleteButton.className = 'delete-button';
+        deleteButton.classList.add('delete-button', 'fas', 'fa-times', 'btn');
+        deleteButton.setAttribute('title', 'Remove todo');
         todoDiv.appendChild(deleteButton);
 
         // append todoDiv to list
@@ -82,26 +82,18 @@ function addTodo(event) {
 };
 
 function deleteCheckTodo(event) {
-// do I need this? look into further
-// event.preventDefault();
-
-// identify element being clicked on
+// define variable that is being clicked
 let targetLi = event.target;
 
-// if statement - what to do if delete button clicked - delete button identifier = classname delete-button
-// could try .includes() - determine whether or not a string includes another string (prob not right)
-// could try .matches() - checks if the element "is" the selector
-// could try .contains() - checks to see if an element is in the page's body (prob too broad)
-
-if (targetLi.classList.matches('delete-button')) {
+// delete todo
+if (targetLi.classList[0] === 'delete-button') {
     // need to grab parent of element to remove - trying to remove element directly not working
     let removeTodo = targetLi.parentElement;
-
     // now remove target element
     removeTodo.remove();
 };
 
-if (targetLi.classList.matches('check-button')) {
+if (targetLi.classList[0] === 'check-button') {
     // linethrough text
     // change opacity of text
     // change opacity of li
